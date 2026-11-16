@@ -3,6 +3,8 @@ name: triage-nightly
 description: "Faz a triagem do run noturno de testes E2E. Compara com o run anterior, classifica cada falha (conhecida, nova, flaky, cascata, ambiente) e entrega um resumo curto. Use quando alguém disser \"a nightly quebrou\", \"triagem do run de hoje\" ou passar o link de um run agendado."
 ---
 
+<!-- Gerado por scripts/exportar.py; edite skills/ na distribuição. -->
+
 # Triagem da nightly
 
 Objetivo: transformar uma lista de testes vermelhos em uma lista curta de causas, dizendo o que precisa de ação hoje.

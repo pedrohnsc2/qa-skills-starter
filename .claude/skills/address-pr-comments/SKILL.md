@@ -3,6 +3,8 @@ name: address-pr-comments
 description: "Trata os comentários de review de um pull request. Lista as threads abertas, dá um veredito para cada uma e, depois da aprovação, corrige o código ou responde. Use quando alguém disser \"responde os comentários do PR\", \"o revisor pediu mudanças\" ou passar o link de um PR com review pendente."
 ---
 
+<!-- Gerado por scripts/exportar.py; edite skills/ na distribuição. -->
+
 # Tratar comentários de PR
 
 ## Passos

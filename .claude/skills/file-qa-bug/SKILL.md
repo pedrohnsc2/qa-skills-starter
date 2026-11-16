@@ -3,6 +3,8 @@ name: file-qa-bug
 description: "Transforma achados de uma sessão de teste em bugs bem escritos no gerenciador de tickets, depois de revisar cada um com a pessoa. Use quando alguém disser \"abre os bugs\", \"registra esses achados\" ou terminar uma rodada de testes com problemas para reportar."
 ---
 
+<!-- Gerado por scripts/exportar.py; edite skills/ na distribuição. -->
+
 # Registrar bugs de QA
 
 Um bug bom pode ser reproduzido por alguém que nunca viu a tela. O resto é detalhe.

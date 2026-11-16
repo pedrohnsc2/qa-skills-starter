@@ -1,74 +1,73 @@
-# IA no dia a dia de QA — kit de skills
+# Kit de IA para QA — prompts, skills e rotinas
 
-Um ponto de partida para usar o Claude Code no dia a dia de QA: skills, modelos de rotina e arquivos de memória. Nada aqui depende de uma empresa ou produto específico. Tudo foi escrito para ser adaptado.
+Material de apoio da aula **IA no dia a dia de QA: skills, rotinas e agentes na prática**, de Pedro Henrique.
 
-Material de apoio da videoaula **IA no dia a dia de QA: skills, rotinas e agentes na prática**, de Pedro Henrique.
+▶️ [Assistir à videoaula](https://youtu.be/lEjRHYNlm7w) · [Baixar o kit em ZIP](https://github.com/pedrohnsc2/qa-skills-starter/archive/refs/heads/main.zip)
 
-▶️ [Assistir à videoaula no YouTube](https://youtu.be/lEjRHYNlm7w)
+Use IA para triagem de falhas, review de testes e status de QA. Comece em um chat com arquivos anexados ou instale as skills no assistente que trabalha no seu repositório. Os exemplos são genéricos e precisam ser adaptados ao seu projeto.
 
-> O vídeo pode ainda estar privado enquanto a publicação é preparada.
+## Escolha sua ferramenta
 
-## Comece aqui
+| Ferramenta | Começar por | O que o kit oferece |
+|---|---|---|
+| ChatGPT | [Guia](docs/ferramentas/chatgpt.md) | 3 prompts universais e instruções de Projeto |
+| Gemini no navegador | [Guia](docs/ferramentas/gemini.md) | 3 prompts e versões para importar como Skills, quando disponíveis |
+| Cursor | [Guia](docs/ferramentas/cursor.md) | 8 skills em `.cursor/skills/` |
+| Google Antigravity | [Guia](docs/ferramentas/antigravity.md) | 8 skills em `.agents/skills/` |
+| Gemini CLI | [Guia](docs/ferramentas/gemini-cli.md) | 8 skills em `.gemini/skills/` |
+| Codex | [Guia](docs/ferramentas/codex.md) | 8 skills em `.agents/skills/` |
+| Claude Code | [Guia](docs/ferramentas/claude.md) | As 8 skills originais em `.claude/skills/` |
+| Outro chat | [Prompts universais](prompts/README.md) | Copiar, colar e fornecer evidências |
 
-1. [Baixe o kit em ZIP](https://github.com/pedrohnsc2/qa-skills-starter/archive/refs/heads/main.zip) ou clone este repositório.
-2. Siga a instalação abaixo e adapte os campos da skill escolhida.
-3. Faça o [primeiro exercício](docs/primeiro-exercicio.md): triagem de uma execução sem alterar código.
+Não precisa instalar Python para usar os arquivos prontos. A matriz descreve os pacotes e os formatos documentados, não uma certificação de execução em todas as ferramentas. Consulte [compatibilidade e fontes](docs/compatibilidade.md).
 
-## Pré-requisitos
+## Experimente em cinco minutos
 
-- Claude Code, para carregar a estrutura `.claude/skills/` fornecida neste kit.
-- Um repositório de testes e acesso aos logs das execuções.
-- GitHub CLI (`gh`) autenticado, quando a skill usar os exemplos de GitHub Actions ou PRs.
-- Conectores de tickets, email ou chat apenas nos fluxos que precisarem dessas ferramentas.
+1. Abra o [prompt de triagem](prompts/triage-nightly.md) e cole em um chat.
+2. Envie o [exemplo fictício](docs/exemplo-triagem.md).
+3. Confira as causas prováveis e as lacunas apontadas.
+4. Depois, use logs reais que você tenha autorização para compartilhar.
 
-Os arquivos são modelos em Markdown, não um serviço instalado: clonar o kit não agenda tarefas nem conecta ferramentas. Em outro assistente, adapte o formato de instalação e os comandos.
+Para trabalhar no repositório, siga o [primeiro exercício com uma nightly](docs/primeiro-exercicio.md) e o guia da sua ferramenta. Copie só a variante escolhida e preserve configurações que já existem.
 
-## O que tem aqui
+## Os oito procedimentos
 
+| Skill | Resultado |
+|---|---|
+| [triage-nightly](skills/triage-nightly/SKILL.md) | Compara runs e agrupa falhas por causa provável |
+| [investigate-failing-test](skills/investigate-failing-test/SKILL.md) | Investiga e distingue teste, produto e ambiente |
+| [new-e2e-test](skills/new-e2e-test/SKILL.md) | Escreve teste seguindo o padrão do projeto |
+| [create-pr](skills/create-pr/SKILL.md) | Prepara branch, commit, push e PR |
+| [qa-pr-review](skills/qa-pr-review/SKILL.md) | Rascunha revisão com evidências |
+| [address-pr-comments](skills/address-pr-comments/SKILL.md) | Trata comentários de review após alinhamento |
+| [file-qa-bug](skills/file-qa-bug/SKILL.md) | Prepara bugs reproduzíveis para registro aprovado |
+| [qa-status-update](skills/qa-status-update/SKILL.md) | Monta status a partir de resultados registrados |
+
+As versões de chat desta primeira expansão cobrem triagem, review e status. Os demais fluxos dependem de ferramentas e estão nos pacotes para agentes de código.
+
+## Rotinas e memória
+
+- [Triagem da nightly](rotinas/triagem-nightly.md) e [triagem de email](rotinas/triagem-email.md): modelos para configurar em um agendador compatível.
+- [Testes conhecidos](references/test-investigation/known-red-tests.md) e [armadilhas](references/test-investigation/known-traps.md): memória editável do projeto.
+
+Clonar o kit não agenda nada e não conecta GitHub, Jira, Slack ou email. Revise escopo, acesso e destino da saída e rode manualmente antes de agendar. No modelo de email, confirme as autorizações e o prazo de recuperação com seu provedor. Falha de acesso não significa caixa limpa ou nightly aprovada.
+
+## Antes de usar no trabalho
+
+Preencha `<...>`, confira convenções e use os comandos apropriados ao seu runner. `gh` e opções como `--retries=0` são exemplos de ferramentas específicas, não exigências de todo projeto. Nunca inclua credenciais nos arquivos.
+
+Leia os limites de cada fluxo: triagem só lê; investigação pode editar testes; criar PR inclui operações no Git. No modo chat, os três prompts entregam somente análises e rascunhos. Verifique as evidências antes de agir.
+
+## Estrutura e manutenção
+
+`skills/` e `references/` são as fontes principais. `.claude/`, os pacotes em `integracoes/` e os três prompts são gerados a partir delas; os guias ficam em `docs/`.
+
+Para contribuir com o kit (Python 3.9+):
+
+```bash
+python3 scripts/exportar.py
+python3 scripts/exportar.py --check
+python3 scripts/validar.py
 ```
-.claude/
-├── skills/
-│   ├── triage-nightly/           # Triagem do run noturno de E2E
-│   ├── investigate-failing-test/ # Descobre por que um teste falhou e corrige ou reporta
-│   ├── new-e2e-test/             # Cria um teste novo no padrão do repo
-│   ├── create-pr/                # Branch, commit, push e PR de uma vez
-│   ├── qa-pr-review/             # Rascunha o review de um PR de testes
-│   ├── address-pr-comments/      # Responde e resolve comentários de review
-│   ├── file-qa-bug/              # Transforma achados em bugs bem escritos
-│   └── qa-status-update/         # Monta o update para a daily ou a semanal
-└── references/
-    └── test-investigation/
-        ├── known-red-tests.md    # Testes vermelhos de propósito
-        └── known-traps.md        # Armadilhas que já enganaram uma investigação
-rotinas/
-├── triagem-nightly.md            # Prompt pronto para agendar
-└── triagem-email.md              # Prompt pronto para agendar
-```
 
-## Como instalar
-
-1. Copie a pasta `.claude/` para a raiz do seu repo de testes (ou junte com a que já existe).
-2. Abra os `SKILL.md` que tiverem campos de configuração e preencha a seção **Ajuste antes de usar**. Os trechos entre `<...>` são seus.
-3. Faça commit. Quem clonar o repo já recebe as skills.
-4. Chame pelo nome: `/create-pr`, `/triage-nightly`, e assim por diante.
-
-As rotinas em `rotinas/` não são skills. São prompts completos para colar em uma tarefa agendada. Leia os dois antes de agendar: eles dizem o que a rotina pode e não pode fazer.
-
-## Regra, skill, agente ou rotina?
-
-| Peça   | Quando usar                                                        |
-| ------ | ------------------------------------------------------------------ |
-| Regra  | Deve valer toda vez que alguém mexe em certo tipo de arquivo       |
-| Skill  | Um fluxo que você chama quando quer                                |
-| Agente | Trabalho pesado de leitura, que merece um contexto só dele         |
-| Rotina | Um prompt completo que roda com horário, sem ninguém do outro lado |
-
-## Três conselhos
-
-- **Comece pelo que você repete.** Triagem de falha, update de status e review de PR costumam ser os primeiros.
-- **Faça uma vez conversando, depois transforme em skill.** A skill boa nasce de uma conversa que deu certo, não de uma folha em branco.
-- **Escreva os limites.** Leia os limites do fluxo escolhido. A triagem só lê; a investigação pode editar testes; `/create-pr` inclui commit, push e abertura de PR quando você pede esse fluxo. Publicação de reviews, tickets e updates tem suas próprias etapas de confirmação.
-
-## Memória
-
-O agente não lembra da conversa de ontem. O que foi aprendido precisa virar arquivo. Por isso existem `known-red-tests.md` e `known-traps.md`: atualize os dois no mesmo PR em que você descobriu a coisa.
+O gerador escreve somente os arquivos distribuídos neste kit. Ele não instala ferramentas, não acessa a rede e não modifica seus outros repositórios. Depois de copiar uma variante para seu projeto, personalize os arquivos instalados e compare o diff quando atualizar.

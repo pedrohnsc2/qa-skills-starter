@@ -3,6 +3,8 @@ name: investigate-failing-test
 description: "Investiga um ou mais testes automatizados que falharam e decide entre corrigir o teste, reportar um bug de produto ou apontar um problema de ambiente. Use quando alguém passar um ID de teste, um link de run ou uma thread dizendo \"esse teste quebrou, vê o que aconteceu\"."
 ---
 
+<!-- Gerado por scripts/exportar.py; edite skills/ na distribuição. -->
+
 # Investigar teste falhando
 
 A pergunta a responder é sempre a mesma: **o teste está errado, o produto está errado ou o ambiente está fora?** Cada resposta leva a uma saída diferente.

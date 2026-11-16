@@ -3,6 +3,8 @@ name: qa-status-update
 description: "Monta o update de status de QA a partir do que de fato aconteceu: PRs mergeados, tickets movidos e resultado dos runs. Use quando alguém pedir \"update para a daily\", \"resumo da semana\", \"o que eu fiz ontem\" ou \"status para a reunião\"."
 ---
 
+<!-- Gerado por scripts/exportar.py; edite skills/ na distribuição. -->
+
 # Update de status de QA
 
 O update sai de fontes, não da memória. Se não há registro de que algo aconteceu, não entra.

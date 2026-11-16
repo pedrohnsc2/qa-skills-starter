@@ -3,6 +3,8 @@ name: new-e2e-test
 description: "Cria um teste E2E novo seguindo o padrão do repo, a partir de um caso de teste escrito. Use quando alguém pedir \"automatiza o caso X\", \"cria o spec para esse cenário\" ou passar um ID de caso de teste para automatizar."
 ---
 
+<!-- Gerado por scripts/exportar.py; edite skills/ na distribuição. -->
+
 # Novo teste E2E
 
 Um teste novo deve parecer que foi escrito pela mesma pessoa que escreveu os vizinhos. Antes de escrever, leia.

@@ -3,6 +3,8 @@ name: qa-pr-review
 description: "Revisa um pull request de testes automatizados e rascunha o review no chat, separando o que bloqueia do que é opcional. Use quando alguém disser \"revisa o PR 123\", \"dá uma olhada nesse PR de teste\" ou passar um link de PR para avaliar."
 ---
 
+<!-- Gerado por scripts/exportar.py; edite skills/ na distribuição. -->
+
 # Review de PR de testes
 
 O review responde a duas perguntas: **o teste verifica o que o caso de teste pede?** e **ele vai continuar passando daqui a um mês?**

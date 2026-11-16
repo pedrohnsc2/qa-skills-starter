@@ -4,7 +4,7 @@ Escolha uma execução encerrada e um workflow conhecido. A primeira rodada deve
 
 ## Preparar
 
-1. Copie `.claude/` para o repositório de testes. Se a pasta já existir, compare os arquivos e junte o conteúdo sem sobrescrever suas configurações.
+1. Escolha o [guia da sua ferramenta](../README.md) e copie somente a variante correspondente para o repo. Mescle os arquivos sem sobrescrever suas configurações. Os caminhos abaixo exemplificam Claude Code; nos outros pacotes, use `.cursor/`, `.agents/` ou `.gemini/` conforme o guia.
 2. Em `.claude/skills/triage-nightly/SKILL.md`, preencha workflow e formato dos IDs. Deixe o relatório no chat nesta primeira rodada.
 3. Revise os modelos de memória em `.claude/references/test-investigation/`. Os exemplos não são problemas reais do seu projeto.
 4. Confira se você tem acesso aos logs e ao run anterior. Não coloque tokens nos arquivos do kit.

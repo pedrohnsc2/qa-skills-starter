@@ -3,6 +3,8 @@ name: create-pr
 description: "Leva as mudanças locais até um pull request aberto: nome de branch, commit, push e PR com descrição e plano de teste. Use quando alguém disser \"abre o PR\", \"manda isso para review\" ou \"cria o PR dessa mudança\"."
 ---
 
+<!-- Gerado por scripts/exportar.py; edite skills/ na distribuição. -->
+
 # Criar PR
 
 ## Ajuste antes de usar
